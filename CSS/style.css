@@ -1,0 +1,167 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: black;
+    color: rgb(210, 206, 206);
+    min-width: 280px;
+}
+
+/***** LOGO ***********/
+#container-logo{
+   /*  border: 1px solid red; */
+    width: 100%;
+}
+
+#banco, #black{
+    font-size: 3em;
+}
+
+#banco{
+    margin-right: 40px;
+    color: rgb(210, 206, 206);
+}
+
+#banco::after{
+    content: '';
+    display: block;
+    width: 100%;
+    background-color: black;
+    height: 25px;
+}
+
+#black::before{
+    content: '';
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    height: 25px;
+}
+
+#black{
+    margin-left: 150px;
+    color: black;
+}
+
+/***** fim LOGO ***********/
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login, .lateral {
+    /* border: 1px solid #ccc; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.lateral {
+    width: 40%;
+    text-align: center;
+    background: linear-gradient(black, rgb(96, 93, 93), #ccc);
+}
+/*********** Login *************/
+#login {
+    width: 60%;
+}
+#login h2{
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    color: rgb(210, 206, 206);
+}
+
+#container-Input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+}
+#container-Input input{
+    width: 250px;
+    height: 35px;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1em;
+    color: rgb(63, 62, 62);
+    margin-bottom: 5px;
+}
+
+#container-Input label{
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+button{
+    width: 100%;
+    height: 35px;
+    margin: 20px auto;
+    border-radius: 10px;
+    letter-spacing: 5px;
+    color: rgb(73, 72, 72);
+    cursor: pointer;
+    font-weight: 800;
+}
+button:hover{
+    opacity: 0.8;
+    color: rgb(43, 43, 43);
+}
+
+#container-cadastro{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+}
+#container-cadastro p{
+    color: #fff;
+    font-size: 1em;
+}
+
+#container-cadastro a{
+    margin: 0 10px 0 10px;
+    font-size: 1.2em;
+    color: #fff /* rgb(64, 64, 221) */
+}
+#container-cadastro a:hover{
+    color: rgb(64, 64, 221)
+}
+
+
+/*********** fim Login *************/
+/****** RESPONSIVIDADE **********************/
+@media (max-width: 575px) {
+   .lateral{ width: 30%; margin: 0;}
+   #login{ width: 70%;}
+   /**logo**/
+   #banco{ margin-right: 0;}
+   #black{ margin-left: 0;}
+   #banco, #black{ font-size: 2em;}
+}
+
+/* @media (max-width: 450px) {
+    .lateral{ width: 20%; margin: 0;}
+    #login{ width: 80%;}
+    /**logo**
+    #banco{ margin-right: 0;}
+    #black{ margin-left: 0;}
+ }  */
+
+ @media (max-width: 450px) {
+    .container{ flex-direction: column;}
+    .lateral{ height: 20vh; width: 100%;}
+    #login{ height: 80vh;}
+    #banco::after{ height: 2px; }
+    #black::before{ height: 2px; }
+ }

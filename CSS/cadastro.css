@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: black;
+    color: rgb(210, 206, 206);
+}
+
+header{
+    height: 20vh;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid   yellowgreen; */
+}
+
+section{
+    display: flex;
+}
+
+
+/*********** inicio logo *************/
+#container-logo{
+    /*  border: 1px solid red; */
+     width: 100%;
+     background: linear-gradient(black, rgb(96, 93, 93), #ccc);
+ }
+
+ 
+ #banco, #black{
+     font-size: 2.5em;
+ }
+ 
+ #banco{
+     margin-right: 40px;
+     color: rgb(210, 206, 206);
+     margin-left: 10px;
+ }
+ #banco a{
+    color: rgb(210, 206, 206);
+ }
+ 
+
+
+ #banco::after{
+     content: '';
+     display: block;
+     width: 100%;
+     background-color: black;
+     height: 2px;
+ }
+ 
+ #black::before{
+     content: '';
+     display: block;
+     width: 100%;
+     background-color: #fff;
+     height: 2px;
+ }
+ 
+ #black{
+     margin-left: 150px;
+     color: black;
+ }
+ #black a{
+    color: black;
+ }
+ 
+/*********** final logo **************/
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 55%;
+}
+#banner h1{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#banner p{
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+#banner a{
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    font-size: 1.3em;
+}
+
+#container-cadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
+
+#container-cadastro h2{
+    width: 90%;
+    text-align: center;
+    align-self: center;
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+#container-cadastro h2::after{
+    width: 100%;
+    content: '';
+    display: block;
+    background-color: rgb(205, 202, 202);
+    height: 4px;
+    margin-top: 10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 80%;
+    background-color: rgb(126, 124, 124);
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+}
+form label{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    letter-spacing: 3px;
+}
+form input{
+    height: 35px;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 1em;
+}
+
+form button{
+    margin: 20px auto;
+    height: 35px;
+    border-radius: 5px;
+    width: 100%;
+    letter-spacing: 4px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+form button:hover{
+    opacity: .8;
+}
+
+footer{
+    height: 15vh;
+    background-color: rgb(164, 162, 162);
+    margin-top: 25px;
+}
+
+
+/****************** RESPONSIVIDADE *******************/
+
+@media (max-width: 690px){
+    #container-cadastro{ width: 50%; }
+    #banner{ width: 50%;}
+}
+@media (max-width: 650px){
+    main{ flex-direction: column;}
+    #container-cadastro{ width: 80%; }
+    #banner{ width: 80%;}
+    #container-logo{
+        display: flex; justify-content: center;
+        align-items: center; flex-direction: column;
+    }
+    #black{ font-size: 2em; margin-left: 40px;}
+    #banco{ font-size: 2em; }
+    #container-cadastro h2{margin-top: 50px;}
+}
+@media (max-width: 500px){
+    #container-cadastro{ width: 85%; }
+    #banner{ width: 85%;}
+}
+@media (max-width: 400px){
+    #container-cadastro{ width: 100%; }
+    #banner{ width: 100%;}
+}
